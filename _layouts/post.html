@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<article class="post center ">
+  <h2 class="post-title center-text" >{{ page.title }}</h2>
+  <div class="center-text post-header-date"><time datetime="{{ page.date | date_to_xmlschema }}" class="post-date ">{{ page.date | date_to_string }}</time></div>
+  <div class="links center-text">
+    
+    <!-- Post linking system -->
+     
+     {% if page.previous.url %} 
+      <a class="prev" href="{{page.previous.url}}">previous</a> //
+    {% endif %} 
+
+      <a href="http://blog.liamrahav.me">home</a> 
+    
+      {% if page.next.url %} 
+        // <a class="next" href="{{page.next.url}}">next</a> 
+      {% endif %} 
+      
+      <!-- End post linking system -->
+     
+    
+  </div>
+  
+  <div class="line line-extended center"></div>
+  
+  <div class="full-post">
+  {{ content }}
+  </div>
+
+</article>
+
+
+<!-- Disqus Commenting System -->
+
+<div class="post center">
+<div id="disqus_thread" class="disqus"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'liamrahavblog';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>

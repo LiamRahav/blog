@@ -1,0 +1,29 @@
+---
+layout: front
+title: Blog Home
+---
+
+
+<div class="line center"></div>
+<div class="home center">
+  {% for post in paginator.posts %}
+      <div class="{% if post.alternate == 1 and site.0_is_white %} alternate-post {% endif %} {% if post.alternate == 0 and site.0_is_white != true %} alternate-post {% endif %} ">
+        <h3><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
+        <h5 class="description">{{ post.description }}</h5>
+         <h4><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></h4>  
+      </div>
+      
+  {% endfor %}
+  <div class="center-text links" style="padding-top:5px;">
+   
+      {% if paginator.previous_page != nil %}
+        <a href="{{ paginator.previous_page_path }}">{{ paginator.previous_page }}</a>
+      {% endif %}
+      {{ paginator.page }}
+       {% if paginator.next_page != nil %}
+        <a href="{{ paginator.next_page_path }}">{{ paginator.next_page }}</a>
+      {% endif %}
+      	 
+    
+  </div>
+</div>

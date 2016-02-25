@@ -1,0 +1,45 @@
+$lighter-gray: #F8F8F8;
+
+.post{
+	width: 35%;
+}
+
+.alternate-post {
+	background-color: $lighter-gray;
+}
+
+
+.post-header-date {
+	margin-top: -10px;
+	padding-bottom: 12.5px;
+}
+
+article {
+	line-height: 1.65;
+	code, pre{
+		line-height: 1.3;
+	}
+	full-post{
+		a {
+			text-decoration: none;
+		}
+	}
+	
+	blockquote {
+		background: $lighter-gray;
+		padding-left: 0;
+		margin-left: 5px;
+	}
+}
+
+.line-extended {
+	width: 60%;
+}
+
+.line-full {
+	width: 100%;
+}
+
+.disqus {
+	padding-bottom: 75px;
+}

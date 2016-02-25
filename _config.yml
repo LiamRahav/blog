@@ -1,0 +1,27 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:               Blog
+headertitle:         Liam Rahav
+url:                 http://blog.liamrahav.me
+paginate:            5
+baseurl:             ""
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Liam Rahav
+  url:               http://liamrahav.me
+  email:             im@liamrahav.me
+
+
