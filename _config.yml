@@ -5,7 +5,7 @@ permalink:           pretty
 
 # Setup
 title:               Blog
-headertitle:         Liam Rahav
+headertitle: Liam Rahav
 url:                 http://blog.liamrahav.me
 gems:                ['jekyll-paginate']
 paginate:            5
